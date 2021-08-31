@@ -5,7 +5,7 @@ import { TaskCreator } from "./componentes/TaskCreator";
 import VisibilityControl from "./componentes/VisibilityControl";
 
 function App() {
-  const [userName, setUserName] = useState("Luciano");
+  const [userName] = useState("Luciano");
   const [taskItems, setTaskItems] = useState([]);
   const [showComplited, setSwohComplited] = useState(false);
 
@@ -15,11 +15,7 @@ function App() {
 
     if (data != null) {
       setTaskItems(JSON.parse(data));
-    } else {
-      setSwohComplited();
-      setUserName();
-      setTaskItems();
-    }
+    } 
   }, []);
 
   useEffect(() => {
